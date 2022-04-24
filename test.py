@@ -1,4 +1,5 @@
 from pyrogram import client, filters
+from pyrogram.type import InlineKeyboardMarkup, InlineKeyboardButton
 
 nihaal=client(
     "Pyrogram Bot",
@@ -8,8 +9,23 @@ nihaal=client(
 )
 
 @nihaal.on_message(filters.command("start"))
-async def start_message(bot,message):
-    await message.reply_text("hi iam just test bot made by @NL_MP4")
+async def start_message(nihaal,message):
+    await message.reply_photo(
+        photo="https://telegra.ph/file/3f5c3a461d41522a3b7d2.jpg",
+        caption="hello iam just a test bot ",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton('add me to your group", url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton("owner", url="https://t.me/NL_MP4"),
+            InlineKeyboardButton("group", url="https://t.me/movie_lookam")
+            ],[
+            InlineKeyboardButton("help", callback_data="help"),
+            InlineKeyboardButton("about", callback_data="about")
+            ]]
+         )
+    )
+        
+            
     
     
 nihaal.run()
