@@ -14,8 +14,6 @@ async def start_message(nihaal,message):
         photo="https://telegra.ph/file/3f5c3a461d41522a3b7d2.jpg",
         caption="hello iam just a test bot ",
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton('add me to your group", url="http://t.me/{temp.U_NAME}?startgroup=true")
-            ],[
             InlineKeyboardButton("owner", url="https://t.me/NL_MP4"),
             InlineKeyboardButton("group", url="https://t.me/movie_lookam")
             ],[
